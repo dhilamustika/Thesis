@@ -1,0 +1,161 @@
+Log ini dibuat oleh Dhila pada Januari 2022
+Kalau ada pertanyaan, boleh langsung hubungi:
+Email	: dhilamustika@gmail.com
+No. tlp	: +6285691115298
+Terima kasih :)
+
+
+
+================================================================================================================================================
+
+Running Amuse:
+
+
+1. Buka terminal
+
+	ctrl + alt + T
+
+
+2. Buka virtual environment Amuse
+
+	. Amuse-env/bin/activate
+
+================================================================================================================================================
+
+
+
+================================================================================================================================================
+
+Catatan untuk TRES:
+
+
+1. Masalah numpy
+
+   TRES enggak bisa pakai numpy-1.19.5 (ini numpy versi baru), nanti bakal keluar tulisan ini di terminal ...
+
+	  ModuleNotFoundError: No module named 'numpy.testing.nosetester'
+
+   Jadi, cari versi numpy yang bisa bikin plot dan bisa running TRES, biasanya downgrade numpy.
+
+
+2. Downgrade numpy
+
+   # Percobaan 1
+	 Versi numpy-1.13.3 -> bisa running TRES tapi enggak bisa bikin plot (matplotlib/pylab enggak jalan).
+	 Muncul tulisan ini di terminal ...
+
+	  ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+matplotlib 3.3.4 requires numpy>=1.15, but you have numpy 1.13.3 which is incompatible.
+
+
+   # Percobaan 2
+	 Versi numpy-1.16.6 -> bisa running plot dan running TRES.
+	 Running plot aman, tapi harus pakai pylab (matplotlib enggak bisa).
+	 Waktu running TRES, ada note di terminal kayak gini ...
+
+	  /home/nadhilah/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+
+	 Terlepas dari note di atas, sejauh ini belum ketauan masalah apapun sih.
+	 TRES tetap berhasil di-running.
+	 Jadi untuk masalah numpy, mungkin bisa disesuaikan dengan laptop dan Ubuntu masing-masing (?)
+
+
+3. Ini cara cek dan install numpy
+
+   # Cek versi numpy
+	   pip show numpy
+
+   # Install numpy (otomatis versi baru)
+	   pip install numpy
+
+   # Install numpy versi tertentu
+	   pip install numpy==(versi)
+   	   Misalnya
+	   pip install numpy==1.13.3
+
+================================================================================================================================================
+
+
+
+================================================================================================================================================
+
+Running TRES:
+
+
+1. Masuk ke folder di mana TRES.py berada (TRES-main)
+
+	 cd Amuse/TRES-main
+
+
+2. Running TRES.py
+
+	 python TRES.py (tambah parameter input)
+
+	 Misalnya:
+	 python TRES.py -M 1.1 -m 0.9 -l 3 -E 0.0 -e 0.0 -A 200 -a 20000 -z 0.001 -T 5e3 -f TRES_5e3Myr_3 --dir_plots "/Amuse/TRES-main"
+
+
+3. File output bisa dilihat di (nama output).hdf
+
+	 Ingat! Output TRES bukan data parameter yang dihitung sepanjang waktu dengan interval teratur,
+	 tapi berupa snapshot peristiwa yang menarik menurut TRES.
+	 Jadi, mungkin aja outputnya cuma 2 snapshot, 5, 9, atau sekian snapshot.
+	 Terus gimana cara ngedit-nya biar snapshot peristiwanya menarik menurut kita?
+	 Enggak tau, yang bikin log ini belom sanggup ngecek 3391 baris coding-an TRES :(
+
+
+4. Belum punya HDFView (apps untuk membuka file .hdf)?
+   Install dulu!
+
+	 sudo apt-get install hdfview
+
+
+5. Untuk memudahkan user, output dari running TRES bisa direduksi
+   Output-nya jadi lebih mudah dibaca
+   (re: lebih ringkas dan enggak perlu banyak klik kayak waktu buka file .hdf)
+   Setelah direduksi, simpan output ke dalam file txt
+   Oh iya, rdc_TRES.py bisa diedit sesuai kebutuhan yaa ...
+
+	 python rdc_TRES.py -f (nama file).hdf > (nama file output yang disimpan) 
+
+	 Misalnya:
+	 python rdc_TRES.py -f TRES_5e3Myr_3.hdf > TRES_5e3Myr_3_output
+
+
+6. Lihat data/parameter yang dibutuhkan di file output, ada di baris dan kolom berapa?
+   Kalau bisa, edit sedikit biar baris dan kolom di setiap snapshot-nya sama,
+   dan enggak mengacaukan perhitungan selanjutnya.
+   Misalnya, tulisan "Main Sequence Star" diedit jadi "Main_Sequence_Star".
+   Kasih header file juga boleh, biar enggak lupa parameter awal yang dimasukin.
+
+
+7. Plot data output TRES
+
+	 python plot.py (nama output)
+	
+	 Misalnya:
+	 python plot.py TRES_5e3Myr_3_output
+
+   Coding-an plot.py dibuat sesuai kebutuhan user.
+   Jadi, jangan lupa di-edit ya :)
+
+================================================================================================================================================
+
+
+
+================================================================================================================================================
+
+Konversi AU ke R_sun
+
+0.10 AU = 21.5032 R_sun
+0.13 AU = 27.95418 R_sun
+0.15 AU = 32.25482 R_sun
+0.20 AU = 43.0064 R_sun
+1.00 AU = 215.032 R_sun
+
+1 Sun's radius = 0.0046524726 AU, UA
+1 AU, UA = 214.9394693836 Sun's radius
+
+================================================================================================================================================
+

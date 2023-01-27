@@ -1,0 +1,47 @@
+Log ini dibuat oleh Dhila pada Januari 2022
+Kalau ada pertanyaan, boleh langsung hubungi:
+Email	: dhilamustika@gmail.com
+No. tlp	: +6285691115298
+Terima kasih :)
+
+
+
+================================================================================================================================================
+
+Masuk ke Milkyway:
+
+
+1. Buka terminal
+
+	ctrl + alt + T
+
+
+2. Masuk ke server Milkyway/WS1
+
+	ssh -p 554 (nama_akun)@milkyway.as.itb.ac.id
+	ssh -X (nama_akun)@ws1.as.itb.ac.id
+
+	Misalnya:
+	ssh -p 554 s10315040@milkyway.as.itb.ac.id
+
+
+3. Masukkan password
+
+
+4. Pindah ke home2
+
+	cd /home2/nama_akun
+
+	Misalnya:
+	cd /home2/s10315040
+
+================================================================================================================================================
+
+Cari file/directory:
+
+	find . -type d | grep (nama_file/directory)		-> ini untuk cari directory
+	find . -type f | grep (nama_file/directory)		-> ini untuk cari file
+
+	Misalnya:
+	find . -type d | grep TRES
+
