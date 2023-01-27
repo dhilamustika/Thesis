@@ -31,56 +31,56 @@ filename.close()
 
 age = []
 triple_number = []
-relative_inclination_rad = []				# Radian
-relative_inclination_deg = []				# Degree
+relative_inclination_rad = []			# Radian
+relative_inclination_deg = []			# Degree
 dynamical_instability = []
 kozai_type = []
 error_flag_secular = []
 
 binary_type_in = []
 stability_in = []
-semimajoraxis_in_rsun = []					# Rsun
-semimajoraxis_in_au = []					# AU
+semimajoraxis_in_rsun = []			# Rsun
+semimajoraxis_in_au = []			# AU
 eccentricity_in = []
-argument_of_pericenter_in_rad = []			# Radian
-argument_of_pericenter_in_deg = []			# Degree
-argument_of_pericenter_in_mod = []			# Degree, modulo
+argument_of_pericenter_in_rad = []		# Radian
+argument_of_pericenter_in_deg = []		# Degree
+argument_of_pericenter_in_mod = []		# Degree, modulo
 longitude_of_ascending_node_in_rad = []		# Radian
 longitude_of_ascending_node_in_deg = []		# Degree
 longitude_of_ascending_node_in_mod = []		# Degree, modulo
 
 binary_type_out = []
 stability_out = []
-semimajoraxis_out_rsun = []					# Rsun
-semimajoraxis_out_au = []					# AU
+semimajoraxis_out_rsun = []			# Rsun
+semimajoraxis_out_au = []			# AU
 eccentricity_out = []
-argument_of_pericenter_out_rad = []			# Radian
-argument_of_pericenter_out_deg = []			# Degree
-argument_of_pericenter_out_mod = []			# Degree, modulo
+argument_of_pericenter_out_rad = []		# Radian
+argument_of_pericenter_out_deg = []		# Degree
+argument_of_pericenter_out_mod = []		# Degree, modulo
 longitude_of_ascending_node_out_rad = []	# Radian
 longitude_of_ascending_node_out_deg = []	# Degree
 longitude_of_ascending_node_out_mod = []	# Degree, modulo
 
 is_donor_1 = []
 stellar_type_1 = []
-mass_1 = []									# Msun
-spin_angular_frequency_1 = []				# Myr**-1
-radius_1 = []								# Rsun
-core_mass_1 = []							# Msun
+mass_1 = []					# Msun
+spin_angular_frequency_1 = []			# Myr**-1
+radius_1 = []					# Rsun
+core_mass_1 = []				# Msun
 
 is_donor_2 = []
 stellar_type_2 = []
-mass_2 = []									# Msun
-spin_angular_frequency_2 = []				# Myr**-1
-radius_2 = []								# Rsun
-core_mass_2 = []							# Msun
+mass_2 = []					# Msun
+spin_angular_frequency_2 = []			# Myr**-1
+radius_2 = []					# Rsun
+core_mass_2 = []				# Msun
 
 is_donor_3 = []
 stellar_type_3 = []
-mass_3 = []									# Msun
-spin_angular_frequency_3 = []				# Myr**-1
-radius_3 = []								# Rsun
-core_mass_3 = []							# Msun
+mass_3 = []					# Msun
+spin_angular_frequency_3 = []			# Myr**-1
+radius_3 = []					# Rsun
+core_mass_3 = []				# Msun
 
 
 # Memasukkan nilai ke list
@@ -256,62 +256,69 @@ longitude_of_ascending_node_out_mod = longitude_of_ascending_node_out_deg % 360
 # Membuat tabel
 # =============
 
-tabel = {'age (Myr)'									: age,
-         'triple_number'								: triple_number,
-         'relative_inclination (rad)'					: relative_inclination_rad,
-         'relative_inclination (deg)'					: relative_inclination_deg,
-         'dynamical_instability'						: dynamical_instability,
-         'kozai_type'									: kozai_type,
-         'error_flag_secular'							: error_flag_secular,
+tabel = {'age (Myr)'					: age,
+         'triple_number'				: triple_number,
+         'relative_inclination (rad)'			: relative_inclination_rad,
+         'relative_inclination (deg)'			: relative_inclination_deg,
+         'dynamical_instability'			: dynamical_instability,
+         'kozai_type'					: kozai_type,
+         'error_flag_secular'				: error_flag_secular,
 
-         'binary_type_in'								: binary_type_in,
-         'stability_in'									: stability_in,
-         'semimajoraxis_in (Rsun)'						: semimajoraxis_in_rsun,
-         'semimajoraxis_in (AU)'						: semimajoraxis_in_au,
-         'eccentricity_in'								: eccentricity_in,
-         'argument_of_pericenter_in (rad)'				: argument_of_pericenter_in_rad,
-         'argument_of_pericenter_in (deg)'				: argument_of_pericenter_in_deg,
-         'argument_of_pericenter_in (deg,mod)'			: argument_of_pericenter_in_mod,
-         'longitude_of_ascending_node_in (rad)'			: longitude_of_ascending_node_in_rad,
-         'longitude_of_ascending_node_in (deg)'			: longitude_of_ascending_node_in_deg,
-         'longitude_of_ascending_node_in (deg,mod)'		: longitude_of_ascending_node_in_mod,
+         'binary_type_in'				: binary_type_in,
+         'stability_in'					: stability_in,
+         'semimajoraxis_in (Rsun)'			: semimajoraxis_in_rsun,
+         'semimajoraxis_in (AU)'			: semimajoraxis_in_au,
+         'eccentricity_in'				: eccentricity_in,
+         'argument_of_pericenter_in (rad)'		: argument_of_pericenter_in_rad,
+         'argument_of_pericenter_in (deg)'		: argument_of_pericenter_in_deg,
+         'argument_of_pericenter_in (deg,mod)'		: argument_of_pericenter_in_mod,
+         'longitude_of_ascending_node_in (rad)'		: longitude_of_ascending_node_in_rad,
+         'longitude_of_ascending_node_in (deg)'		: longitude_of_ascending_node_in_deg,
+         'longitude_of_ascending_node_in (deg,mod)'	: longitude_of_ascending_node_in_mod,
 
-         'binary_type_out'								: binary_type_out,
-         'stability_out'								: stability_out,
-         'semimajoraxis_out (Rsun)'						: semimajoraxis_out_rsun,
-         'semimajoraxis_out (AU)'						: semimajoraxis_out_au,
-         'eccentricity_out'								: eccentricity_out,
-         'argument_of_pericenter_out (rad)'				: argument_of_pericenter_out_rad,
-         'argument_of_pericenter_out (deg)'				: argument_of_pericenter_out_deg,
-         'argument_of_pericenter_out (deg,mod)'			: argument_of_pericenter_out_mod,
-         'longitude_of_ascending_node_out (rad)'		: longitude_of_ascending_node_out_rad,
-         'longitude_of_ascending_node_out (deg)'		: longitude_of_ascending_node_out_deg,
+         'binary_type_out'				: binary_type_out,
+         'stability_out'				: stability_out,
+         'semimajoraxis_out (Rsun)'			: semimajoraxis_out_rsun,
+         'semimajoraxis_out (AU)'			: semimajoraxis_out_au,
+         'eccentricity_out'				: eccentricity_out,
+         'argument_of_pericenter_out (rad)'		: argument_of_pericenter_out_rad,
+         'argument_of_pericenter_out (deg)'		: argument_of_pericenter_out_deg,
+         'argument_of_pericenter_out (deg,mod)'		: argument_of_pericenter_out_mod,
+         'longitude_of_ascending_node_out (rad)'	: longitude_of_ascending_node_out_rad,
+         'longitude_of_ascending_node_out (deg)'	: longitude_of_ascending_node_out_deg,
          'longitude_of_ascending_node_out (deg,mod)'	: longitude_of_ascending_node_out_mod,
 
-         'is_donor_1'									: is_donor_1,
-         'stellar_type_1'								: stellar_type_1,
-         'mass_1 (Msun)'								: mass_1,
-         'spin_angular_frequency_1 (Myr**-1)'			: spin_angular_frequency_1,
-         'radius_1 (Rsun)'								: radius_1,
-         'core_mass_1 (Msun)'							: core_mass_1,
+         'is_donor_1'					: is_donor_1,
+         'stellar_type_1'				: stellar_type_1,
+         'mass_1 (Msun)'				: mass_1,
+         'spin_angular_frequency_1 (Myr**-1)'		: spin_angular_frequency_1,
+         'radius_1 (Rsun)'				: radius_1,
+         'core_mass_1 (Msun)'				: core_mass_1,
 
-         'is_donor_2'									: is_donor_2,
-         'stellar_type_2'								: stellar_type_2,
-         'mass_2 (Msun)'								: mass_2,
-         'spin_angular_frequency_2 (Myr**-1)'			: spin_angular_frequency_2,
-         'radius_2 (Rsun)'								: radius_2,
-         'core_mass_2 (Msun)'							: core_mass_2,
+         'is_donor_2'					: is_donor_2,
+         'stellar_type_2'				: stellar_type_2,
+         'mass_2 (Msun)'				: mass_2,
+         'spin_angular_frequency_2 (Myr**-1)'		: spin_angular_frequency_2,
+         'radius_2 (Rsun)'				: radius_2,
+         'core_mass_2 (Msun)'				: core_mass_2,
 
-         'is_donor_3'									: is_donor_3,
-         'stellar_type_3'								: stellar_type_3,
-         'mass_3 (Msun)'								: mass_3,
-         'spin_angular_frequency_3 (Myr**-1)'			: spin_angular_frequency_3,
-         'radius_3 (Rsun)'								: radius_3,
-         'core_mass_3 (Msun)'							: core_mass_3,
+         'is_donor_3'					: is_donor_3,
+         'stellar_type_3'				: stellar_type_3,
+         'mass_3 (Msun)'				: mass_3,
+         'spin_angular_frequency_3 (Myr**-1)'		: spin_angular_frequency_3,
+         'radius_3 (Rsun)'				: radius_3,
+         'core_mass_3 (Msun)'				: core_mass_3,
         }
 
 #df = pd.DataFrame(tabel)
-df = pd.DataFrame(tabel, columns=['age (Myr)','triple_number','relative_inclination (rad)','relative_inclination (deg)','dynamical_instability','kozai_type','error_flag_secular','binary_type_in','stability_in','semimajoraxis_in (Rsun)','semimajoraxis_in (AU)','eccentricity_in','argument_of_pericenter_in (rad)','argument_of_pericenter_in (deg)','argument_of_pericenter_in (deg,mod)','longitude_of_ascending_node_in (rad)','longitude_of_ascending_node_in (deg)','longitude_of_ascending_node_in (deg,mod)','binary_type_out','stability_out','semimajoraxis_out (Rsun)','semimajoraxis_out (AU)','eccentricity_out','argument_of_pericenter_out (rad)','argument_of_pericenter_out (deg)','argument_of_pericenter_out (deg,mod)','longitude_of_ascending_node_out (rad)','longitude_of_ascending_node_out (deg)','longitude_of_ascending_node_out (deg,mod)','is_donor_1','stellar_type_1','mass_1 (Msun)','spin_angular_frequency_1 (Myr**-1)','radius_1 (Rsun)','core_mass_1 (Msun)','is_donor_2','stellar_type_2','mass_2 (Msun)','spin_angular_frequency_2 (Myr**-1)','radius_2 (Rsun)','core_mass_2 (Msun)','is_donor_3','stellar_type_3','mass_3 (Msun)','spin_angular_frequency_3 (Myr**-1)','radius_3 (Rsun)','core_mass_3 (Msun)'])
+df = pd.DataFrame(tabel, columns=['age (Myr)','triple_number','relative_inclination (rad)','relative_inclination (deg)','dynamical_instability','kozai_type','error_flag_secular',
+				  'binary_type_in','stability_in','semimajoraxis_in (Rsun)','semimajoraxis_in (AU)','eccentricity_in','argument_of_pericenter_in (rad)','argument_of_pericenter_in (deg)',
+				  'argument_of_pericenter_in (deg,mod)','longitude_of_ascending_node_in (rad)','longitude_of_ascending_node_in (deg)','longitude_of_ascending_node_in (deg,mod)',
+				  'binary_type_out','stability_out','semimajoraxis_out (Rsun)','semimajoraxis_out (AU)','eccentricity_out','argument_of_pericenter_out (rad)','argument_of_pericenter_out (deg)',
+				  'argument_of_pericenter_out (deg,mod)','longitude_of_ascending_node_out (rad)','longitude_of_ascending_node_out (deg)','longitude_of_ascending_node_out (deg,mod)',
+				  'is_donor_1','stellar_type_1','mass_1 (Msun)','spin_angular_frequency_1 (Myr**-1)','radius_1 (Rsun)','core_mass_1 (Msun)',
+				  'is_donor_2','stellar_type_2','mass_2 (Msun)','spin_angular_frequency_2 (Myr**-1)','radius_2 (Rsun)','core_mass_2 (Msun)',
+				  'is_donor_3','stellar_type_3','mass_3 (Msun)','spin_angular_frequency_3 (Myr**-1)','radius_3 (Rsun)','core_mass_3 (Msun)'])
 
 #print (df[df.columns[::-1]])
 ###print (df)
@@ -321,9 +328,9 @@ df = pd.DataFrame(tabel, columns=['age (Myr)','triple_number','relative_inclinat
 # Membuat plot
 # ============
 
-pl.figure(1)											# Plot massa terhadap waktu
-pl.plot(age,mass_1,label='m_1')							# Ini plot garis
-pl.plot(age,mass_1,'o',color='blue')					# Ini plot titik, per snapshot
+pl.figure(1)							# Plot massa terhadap waktu
+pl.plot(age,mass_1,label='m_1')					# Ini plot garis
+pl.plot(age,mass_1,'o',color='blue')				# Ini plot titik, per snapshot
 pl.plot(age,mass_2,label='m_2')
 pl.plot(age,mass_2,'o',color='#ff7f0e')
 pl.plot(age,mass_3,label='m_3')
@@ -352,7 +359,7 @@ pl.xlim(3000, 4000)
 #pl.margins(x=-0.497, y=0.05)
 #pl.savefig('Fig1_3200-3800.png')
 
-pl.figure(2)											# Plot sumbu semi-mayor terhadap waktu
+pl.figure(2)							# Plot sumbu semi-mayor terhadap waktu
 pl.plot(age,semimajoraxis_in_rsun,label='a_in')			# Satuannya Rsun
 pl.plot(age,semimajoraxis_in_rsun,'o',color='blue')
 pl.plot(age,semimajoraxis_out_rsun,label='a_out')
@@ -372,7 +379,7 @@ pl.grid()
 #pl.ylim(0, 50)
 #pl.savefig('Fig-2b.png')
 
-pl.figure(3)											# Plot sumbu semi-mayor terhadap waktu
+pl.figure(3)							# Plot sumbu semi-mayor terhadap waktu
 pl.plot(age,semimajoraxis_in_au,label='a_in')			# Satuannya AU
 pl.plot(age,semimajoraxis_in_au,'o',color='blue')
 pl.plot(age,semimajoraxis_out_au,label='a_out')
